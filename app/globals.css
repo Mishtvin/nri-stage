@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 270 95% 75%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 45 93% 58%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 270 95% 75%;
+    --chart-1: 270 95% 75%;
+    --chart-2: 45 93% 58%;
+    --chart-3: 340 75% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 220 70% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .fantasy-gradient {
+    background: linear-gradient(135deg, hsl(270 95% 75%) 0%, hsl(340 75% 55%) 50%, hsl(45 93% 58%) 100%);
+  }
+  
+  .fantasy-text-gradient {
+    background: linear-gradient(135deg, hsl(270 95% 75%) 0%, hsl(340 75% 55%) 50%, hsl(45 93% 58%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 20px hsla(270, 95%, 75%, 0.3);
+  }
+  
+  .dice-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsla(270, 95%, 75%, 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsla(45, 93%, 58%, 0.1) 2px, transparent 2px);
+    background-size: 40px 40px;
+  }
+}
